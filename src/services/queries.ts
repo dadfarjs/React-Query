@@ -5,6 +5,9 @@ export const useTodosIds = () => {
   return useQuery({
     queryKey: ["todos"],
     queryFn: getTodoIds,
+    refetchOnWindowFocus: false,
+    refetchInterval: false,
+    refetchOnMount: false,
   });
 };
 

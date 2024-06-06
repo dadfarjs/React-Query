@@ -5,9 +5,9 @@ const BASE_URL = "http://localhost:8080";
 const axiosInstance = axios.create({ baseURL: BASE_URL });
 
 export const getTodoIds = async () => {
-  return (await axiosInstance.get<Todo[]>("todos"))?.data?.map(
-    (todo) => todo.id
-  );
+  return (await axiosInstance.get<Todo[]>("todos"))?.data
+    ?.map((todo) => todo.id)
+    .reverse();
   // [1, 2, 3, 4, ...]
 };
 
@@ -16,5 +16,6 @@ export const getTodo = async (id: number) => {
 };
 
 export const createTodo = async (data: Todo) => {
+  console.log("test2", data);
   return axiosInstance.post("todos", data);
 };

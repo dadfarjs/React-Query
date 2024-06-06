@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-input:placeholder-shown {
+input:placeholder-shown,
+textarea:placeholder-shown {
   border: 2px solid darkorange;
   border-radius: 5px;
 }

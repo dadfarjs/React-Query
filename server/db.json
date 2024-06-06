@@ -13,96 +13,97 @@
       "id": 7
     },
     {
-      "checked": true,
-      "title": "title8",
-      "description": "desc8",
-      "id": 8
-    },
-    {
-      "title": "test",
-      "description": "test",
-      "id": 9,
-      "checked": true
-    },
-    {
-      "title": "test",
-      "description": "",
-      "id": 10,
-      "checked": true
-    },
-    {
-      "title": "test",
-      "description": "test",
-      "id": 11,
-      "checked": true
-    },
-    {
-      "title": "test",
-      "description": "test",
-      "id": 12,
-      "checked": true
-    },
-    {
-      "title": "test",
-      "description": "test",
-      "id": 13,
-      "checked": true
-    },
-    {
-      "title": "test",
-      "description": "test",
-      "id": 14
-    },
-    {
-      "title": "test",
-      "description": "test",
-      "id": 15
-    },
-    {
-      "title": "new todo",
-      "description": "new todo",
-      "id": 16
-    },
-    {
-      "title": "new todo",
-      "description": "new todo",
-      "id": 17
-    },
-    {
-      "title": "new todo",
-      "description": "new todo",
-      "id": 18
-    },
-    {
-      "title": "new todo",
-      "description": "new todo",
-      "id": 19
-    },
-    {
       "title": "new todo",
       "description": "new todo",
       "id": 20
+    },
+    {
+      "title": "react-query",
+      "description": "time 34:00",
+      "id": 21
+    },
+    {
+      "title": "rtk-query",
+      "description": "100%",
+      "id": 22
+    },
+    {
+      "title": "NextJs",
+      "description": "SSR - SSG",
+      "id": 23
+    },
+    {
+      "title": "PWA",
+      "description": "Web Worker",
+      "id": 24
     }
   ],
   "projects": [
-    { "id": 1, "name": "project1" },
-    { "id": 2, "name": "project2" },
-    { "id": 3, "name": "project3" },
-    { "id": 4, "name": "project4" },
-    { "id": 5, "name": "project5" },
-    { "id": 6, "name": "project6" },
-    { "id": 7, "name": "project7" },
-    { "id": 8, "name": "project8" },
-    { "id": 9, "name": "project9" },
-    { "id": 10, "name": "project10" },
-    { "id": 11, "name": "project11" },
-    { "id": 12, "name": "project12" },
-    { "id": 13, "name": "project13" },
-    { "id": 14, "name": "project14" },
-    { "id": 15, "name": "project15" },
-    { "id": 16, "name": "project16" }
+    {
+      "id": 1,
+      "name": "project1"
+    },
+    {
+      "id": 2,
+      "name": "project2"
+    },
+    {
+      "id": 3,
+      "name": "project3"
+    },
+    {
+      "id": 4,
+      "name": "project4"
+    },
+    {
+      "id": 5,
+      "name": "project5"
+    },
+    {
+      "id": 6,
+      "name": "project6"
+    },
+    {
+      "id": 7,
+      "name": "project7"
+    },
+    {
+      "id": 8,
+      "name": "project8"
+    },
+    {
+      "id": 9,
+      "name": "project9"
+    },
+    {
+      "id": 10,
+      "name": "project10"
+    },
+    {
+      "id": 11,
+      "name": "project11"
+    },
+    {
+      "id": 12,
+      "name": "project12"
+    },
+    {
+      "id": 13,
+      "name": "project13"
+    },
+    {
+      "id": 14,
+      "name": "project14"
+    },
+    {
+      "id": 15,
+      "name": "project15"
+    },
+    {
+      "id": 16,
+      "name": "project16"
+    }
   ],
-
   "products": [
     {
       "id": 1,
