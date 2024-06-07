@@ -45,10 +45,11 @@ const Todo = () => {
   const updateTodoMutation = useUpdateTodo();
   const deleteTodoMutation = useDeleteTodo();
 
-  const { register, handleSubmit } = useForm<TodoType>();
+  const { register, handleSubmit, reset } = useForm<TodoType>();
 
-  const handleCreateTodoSubmit: SubmitHandler<TodoType> = (data) => {
-    createTodoMutation.mutate(data);
+  const handleCreateTodoSubmit: SubmitHandler<TodoType> = async (data) => {
+    await createTodoMutation.mutate(data);
+    await reset();
   };
 
   const handleMarkAsDoneSubmit = (data: TodoType | undefined) => {
@@ -187,6 +188,7 @@ const Todo = () => {
                           </MenuItem>
                           <MenuItem>
                             <button
+                              disabled={deleteTodoMutation?.isPending}
                               onClick={() => {
                                 setDataTodo(data ?? ({} as TodoType));
                                 setIsOpenDeleteModal(true);
@@ -194,7 +196,9 @@ const Todo = () => {
                               className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10"
                             >
                               <TrashIcon className="size-4 fill-white/30" />
-                              Delete
+                              {deleteTodoMutation?.isPending
+                                ? "Deleting"
+                                : "Delete"}
                               <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">
                                 ⌘D
                               </kbd>
@@ -256,7 +260,7 @@ const Todo = () => {
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
           <DialogPanel className="max-w-lg space-y-4 rounded-lg bg-slate-700 text-slate-200 p-8">
             <DialogTitle className="text-slate-50 font-bold">
-              De/activate Task
+              Update Task
             </DialogTitle>
             <Description>
               This will permanently deactivate your account

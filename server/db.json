@@ -1,20 +1,10 @@
 {
   "todos": [
     {
-      "checked": true,
-      "title": "title6",
-      "description": "desc6",
-      "id": 6
-    },
-    {
-      "title": "new todo",
-      "description": "new todo",
-      "id": 20
-    },
-    {
-      "title": "react-query",
-      "description": "time 34:00",
-      "id": 21
+      "title": "React-Query Tutorial",
+      "description": "Time 54:28 (Start Part Project)",
+      "id": 21,
+      "checked": false
     },
     {
       "title": "RTK-Query",
@@ -26,7 +16,7 @@
       "title": "NextJs",
       "description": "SSR - SSG",
       "id": 23,
-      "checked": true
+      "checked": false
     }
   ],
   "projects": [
