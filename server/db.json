@@ -7,12 +7,6 @@
       "id": 6
     },
     {
-      "checked": true,
-      "title": "title7",
-      "description": "desc7",
-      "id": 7
-    },
-    {
       "title": "new todo",
       "description": "new todo",
       "id": 20
@@ -23,19 +17,16 @@
       "id": 21
     },
     {
-      "title": "rtk-query",
+      "title": "RTK-Query",
       "description": "100%",
-      "id": 22
+      "id": 22,
+      "checked": false
     },
     {
       "title": "NextJs",
       "description": "SSR - SSG",
-      "id": 23
-    },
-    {
-      "title": "PWA",
-      "description": "Web Worker",
-      "id": 24
+      "id": 23,
+      "checked": true
     }
   ],
   "projects": [
