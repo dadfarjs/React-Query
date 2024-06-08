@@ -17,6 +17,12 @@
       "description": "SSR - SSG",
       "id": 23,
       "checked": false
+    },
+    {
+      "title": "test333",
+      "description": "test22",
+      "id": 24,
+      "checked": false
     }
   ],
   "projects": [

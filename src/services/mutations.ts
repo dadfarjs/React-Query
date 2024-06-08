@@ -1,6 +1,10 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import {
+  useInfiniteQuery,
+  useMutation,
+  useQueryClient,
+} from "@tanstack/react-query";
 import { Todo } from "../types/todo";
-import { createTodo, deleteTodo, updateTodo } from "./api";
+import { createTodo, deleteTodo, getProducts, updateTodo } from "./api";
 
 export const useCreateTodo = () => {
   const queryClient = useQueryClient();
@@ -62,6 +66,26 @@ export const useDeleteTodo = () => {
       } else {
         await queryClient.invalidateQueries({ queryKey: ["todos"] });
       }
+    },
+  });
+};
+
+export const useProducts = () => {
+  return useInfiniteQuery({
+    queryKey: ["products"],
+    queryFn: getProducts,
+    initialPageParam: 0,
+    getNextPageParam: (lastPage, _, lastPageParam) => {
+      if (lastPage.length === 0) {
+        return undefined;
+      }
+      return lastPageParam + 1;
+    },
+    getPreviousPageParam: (_, __, firstPageParam) => {
+      if (firstPageParam <= 1) {
+        return undefined;
+      }
+      return firstPageParam - 1;
     },
   });
 };
