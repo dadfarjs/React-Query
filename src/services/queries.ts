@@ -1,5 +1,11 @@
-import { keepPreviousData, useQueries, useQuery } from "@tanstack/react-query";
-import { getProjects, getTodo, getTodoIds } from "./api";
+import {
+  keepPreviousData,
+  useQueries,
+  useQuery,
+  useQueryClient,
+} from "@tanstack/react-query";
+import { getProduct, getProjects, getTodo, getTodoIds } from "./api";
+import { Product } from "../types/product";
 
 export const useTodosIds = () => {
   return useQuery({
@@ -27,5 +33,24 @@ export const useProjects = (page: number) => {
     queryKey: ["projects", { page }],
     queryFn: () => getProjects(page),
     placeholderData: keepPreviousData,
+  });
+};
+
+export const useProduct = (id: number | null) => {
+  const queryClient = useQueryClient();
+
+  return useQuery({
+    queryKey: ["product", { id }],
+    queryFn: () => getProduct(id!),
+    enabled: !!id,
+    placeholderData: () => {
+      const cacheProducts = (
+        queryClient.getQueryData(["products"]) as {
+          pages: Product[] | undefined;
+        }
+      )?.pages?.flat(2);
+
+      return cacheProducts?.find((item) => item.id === id);
+    },
   });
 };

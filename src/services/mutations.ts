@@ -42,7 +42,7 @@ export const useUpdateTodo = () => {
       if (error) {
         console.log(error);
       } else {
-        await queryClient.invalidateQueries({ queryKey: ["todos"] });
+        // await queryClient.invalidateQueries({ queryKey: ["todos"] });
         await queryClient.invalidateQueries({
           queryKey: ["todo", { id: variables.id }],
         });
